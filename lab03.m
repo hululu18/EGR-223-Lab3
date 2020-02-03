@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title: Lab 03 part 1
+% Title: Lab 03 part 1 and 2
 % Filename: lab03.m
 % Author: Dixit Gurung
 % Date: 1/30/2020
 % Instructor: Prof. N Baine
-% Description: This program uses the missile function to simulate one of the
-% instance of the missile problem. In addition, it also calculate
+% Description: This program uses the missile and relay functions to simulate one of the
+% instance form missile and relay problem. In addition, it also calculate
 % theoritical value and percentage difference between them.
 %NOTE: I choose question 1.b for the simulation part which was finding the
 %probability that the target is destroyed by a single misssile knowing that
@@ -70,7 +70,7 @@ percentage_diff = abs(percentage_diff);
 %Printing the the percentage difference, Emperical and theoritical values
 fprintf(' Simulation of 1.b from the missile problem\n');
 fprintf('The probability that the target is destroyed by a single misssile knowing that it is destroyed.\n');
-fprintf('\nEmpirical value: %.4f\n',P_H1_D_emp);
+fprintf('Empirical value: %.4f\n',P_H1_D_emp);
 fprintf('Theoritical value: %.4f\n',P_H1_D_theory );
 fprintf('Percentage difference: %0.2f%%\n',percentage_diff);
 
@@ -79,12 +79,12 @@ fprintf('Percentage difference: %0.2f%%\n',percentage_diff);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 L = 20000;
-P_A = 0.33;
-P_B = 0.42;
-P_C = 0.25;
-P_D_A = 0.01;
-P_D_B = 0.005;
-P_D_C = 0.03;
+P_A = 0.33; %Probability that the rely was manufactured in plant A
+P_B = 0.42; %Probability that the rely was manufactured in plant B
+P_C = 0.25; %Probability that the rely was manufactured in plant C
+P_D_A = 0.01; %Probability of relay produced by plant A is defective
+P_D_B = 0.005;%Probability of relay produced by plant B is defective
+P_D_C = 0.03; %Probability of relay produced by plant C is defective
 
 %Problem 2.a
 %Checking probability of relay being defective
@@ -110,7 +110,7 @@ percentage_diff = abs(percentage_diff);
 %Printing the the percentage difference, Emperical and theoritical values
 fprintf('\n\nPART2\n');
 fprintf('Simulation of Problem 2.a\n');
-fprintf('\nEmpirical value: %.4f\n',P_D_emp);
+fprintf('Empirical value: %.4f\n',P_D_emp);
 fprintf('Theoritical value: %.4f\n',P_D_theory );
 fprintf('Percentage difference: %0.2f%%\n',percentage_diff);
 
@@ -146,6 +146,6 @@ percentage_diff = abs(percentage_diff);
 
 %Printing the the percentage difference, Emperical and theoritical values
 fprintf('\nSimulation of Problem 2.b\n');
-fprintf('\nEmpirical value: %.4f\n',P_C_D_emp);
+fprintf('Empirical value: %.4f\n',P_C_D_emp);
 fprintf('Theoritical value: %.4f\n',P_C_D_theory );
 fprintf('Percentage difference: %0.2f%%\n',percentage_diff);
